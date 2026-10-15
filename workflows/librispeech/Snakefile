@@ -23,7 +23,7 @@ rule download_librispeech_raw:
 
 rule download_librispeech_alignments:
     input: storage.http(LIBRISPEECH_ALIGNMENTS_URL),
-    output: "data/librispeech_alignments"
+    output: directory("data/librispeech_alignments")
     shell: "unzip -d {output} {input}"
 
 

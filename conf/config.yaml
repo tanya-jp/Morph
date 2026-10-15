@@ -15,7 +15,7 @@ hydra:
   run:
     dir: outputs/models/${hydra:job.name}
 
-device: cuda
+device: mps
 
 tokenizer:
   _target_: transformers.Wav2Vec2CTCTokenizer.from_pretrained
